@@ -9,7 +9,7 @@ from agent import init_ai_pr_review_agent
 from celery.utils.log import get_task_logger
 
 # Celery task-queue init
-celery_app = Celery(
+celery_tq = Celery(
     'code_review',
     broker=os.getenv("CELERY_BROKER_URL", "redis://localhost:6379/0"),
     backend=os.getenv("CELERY_RESULT_BACKEND", "redis://localhost:6379/0")
@@ -19,7 +19,7 @@ celery_app = Celery(
 logger = get_task_logger(__name__)
 
 # Celery Tasks
-@celery_app.task(bind=True)
+@celery_tq.task(bind=True)
 def analyze_pr_task(self, pr_request: PRRequest):
     """Asynchronous task to analyze PR"""
     try:
