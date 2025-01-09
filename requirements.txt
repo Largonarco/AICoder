@@ -1,0 +1,9 @@
+redis
+pytest
+celery
+uvicorn
+fastapi
+PyGithub
+requests
+langchain
+langchain_openai
