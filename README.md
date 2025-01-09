@@ -7,6 +7,7 @@ An autonomous code review agent system that leverages AI to analyze GitHub pull 
 The project is organized into several core components:
 
 ```
+|-- .env.example    # Sample .env file
 |-- agent.py        # AI Agent related code using LangChain
 |-- logger.py       # Basic logger implementation
 |-- models.py       # Pydantic Models for data validation
@@ -123,3 +124,10 @@ GET http://localhost:8000/results/<task_id>
 ```
 
 The API provides a comprehensive review of your code, including style issues, potential bugs, and suggestions for improvement, all organized by file and severity level.
+
+## Future Improvements
+
+- Add a lint, and formatting check step before doing AI analysis.
+- Provide an easy interface to integrate the analysis into CI/CD pipelines.
+- Add Slack support so that it quickly notifies the PR author about the code quality.
+- Add option to choose between AI models for analysis.
