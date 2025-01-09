@@ -32,6 +32,7 @@ class FetchPRDiffTool(BaseTool):
 # AI Agent initialiser
 def init_ai_pr_review_agent():
     # OpenAI LLM Setup
+    # Anthopic API would provide more accurate and appropriate analysis
     llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo")
     
     # Prompt
