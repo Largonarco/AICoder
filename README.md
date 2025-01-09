@@ -47,9 +47,9 @@ POST http://localhost:8000/analyze-pr
 
 ```json
 {
-	"repo_url": "https://github.com/user/repo",
 	"pr_number": 123,
-	"github_token": "optional_token"
+	"github_token": "optional_token",
+	"repo_url": "https://github.com/user/repo"
 }
 ```
 
@@ -57,8 +57,8 @@ POST http://localhost:8000/analyze-pr
 
 ```json
 {
-	"status": "processing | completed | failed",
-	"task_id": 123
+	"task_id": 123,
+	"status": "processing | completed | failed"
 }
 ```
 
@@ -74,8 +74,8 @@ GET http://localhost:8000/status/<task_id>
 
 ```json
 {
-	"status": "processing | completed | failed",
-	"task_id": 123
+	"task_id": 123,
+	"status": "processing | completed | failed"
 }
 ```
 
