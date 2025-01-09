@@ -31,8 +31,10 @@ class FetchPRDiffTool(BaseTool):
 
 # AI Agent initialiser
 def init_ai_pr_review_agent():
+    # OpenAI LLM Setup
     llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo")
     
+    # Prompt
     prompt = ChatPromptTemplate.from_messages([
         ("system", """You are an expert code reviewer. Analyze the code for:
         1. Style and formatting issues
@@ -50,6 +52,7 @@ def init_ai_pr_review_agent():
         ("placeholder", "{agent_scratchpad}")
     ])
     
+    # Agentic tools
     tools = [FetchPRDiffTool()]
     agent = create_openai_functions_agent(llm, tools, prompt)
     

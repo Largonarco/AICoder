@@ -5,8 +5,7 @@ from typing import Optional
 from fastapi import HTTPException
 from redis_client import redis_client
 
-
-# Utility to fetch a PR details
+# Utility to fetch a PR's detail
 def fetch_pr_diff(repo_url: str, pr_number: int, token: Optional[str] = None):
     try:
         g = Github(token) if token else Github()
@@ -28,7 +27,6 @@ async def get_cache(task_id: str):
     
     return None
 
-# Helper function to cache results
 async def set_cache(task_id: str, results: dict):    
     redis_client.setex(
         f"cache:results:{task_id}",
