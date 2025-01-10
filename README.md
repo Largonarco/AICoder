@@ -17,6 +17,7 @@ The project is organized into several core components:
 |-- utils.py        # Helper functions and utilities
 |-- Dockerfile      # Container configuration
 |-- docker-compose.yml  # Multi-container orchestration
+|-- test.py         # Basic tests
 ```
 
 ## Installation and Setup
