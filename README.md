@@ -1,4 +1,4 @@
-# PotPieAI Code Review Agent
+# AI Code Review Agent
 
 An autonomous code review agent system that leverages AI to analyze GitHub pull requests, process them asynchronously, and provide structured feedback through an API.
 
